@@ -16,6 +16,11 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('database connected'))
 
-app.listen(process.env.PORT, () => {
-    console.log("The API is running...")
-})
+// app.listen(process.env.PORT, () => {
+//     console.log("The API is running...")
+// })
+
+
+server.listen(port,()=>{  // do not add localhost here if you are deploying it
+    console.log("server listening to port "+port);
+});
