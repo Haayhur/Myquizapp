@@ -36,7 +36,7 @@ router.post('/questions', (req, res) => {
         const { description } = req.body
         const { alternatives } = req.body
 
-        const question = await Question.create({
+        const question =  Question.create({
             description,
             alternatives
         })
